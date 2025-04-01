@@ -116,6 +116,8 @@ kubectl port-forward svc/ilum-ui 9777:9777 -n <namespace>
 Then open http://localhost:9777 in your browser.
 ```
 
+<img width="1098" alt="image" src="https://github.com/user-attachments/assets/5c52c812-0f88-4447-971a-46a827299697" />
+
 Create a New Service/Job:
 
 <img width="1470" alt="image" src="https://github.com/user-attachments/assets/682b1448-4ba4-44d6-8c94-ee23af95b914" />
