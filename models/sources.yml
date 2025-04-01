@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: ilum_data
+    schema: default
+    tables:
+      - name: raw_data
+        identifier: "s3a://my-bucket/raw_data.parquet"
