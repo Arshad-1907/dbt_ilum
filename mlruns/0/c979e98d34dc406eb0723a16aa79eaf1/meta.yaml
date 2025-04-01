@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/ilum_dbt_job/mlruns/0/c979e98d34dc406eb0723a16aa79eaf1/artifacts
+end_time: 1743267792232
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c979e98d34dc406eb0723a16aa79eaf1
+run_name: dbt_run
+run_uuid: c979e98d34dc406eb0723a16aa79eaf1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743267792184
+status: 3
+tags: []
+user_id: afsaruddinmohammed

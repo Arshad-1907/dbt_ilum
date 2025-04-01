@@ -1,0 +1,924 @@
+[0m11:39:33.285113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b6bfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b6b8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bf6710>]}
+
+
+============================== 11:39:33.288000 | 31b059de-2482-48b8-b045-e995adecf275 ==============================
+[0m11:39:33.288000 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:39:33.288313 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/logs', 'profiles_dir': '/Users/afsaruddinmohammed/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:39:33.297123 [info ] [MainThread]: dbt version: 1.9.3
+[0m11:39:33.297331 [info ] [MainThread]: python version: 3.11.4
+[0m11:39:33.297483 [info ] [MainThread]: python path: /Users/afsaruddinmohammed/anaconda3/bin/python
+[0m11:39:33.297611 [info ] [MainThread]: os info: macOS-15.3.1-arm64-arm-64bit
+[0m11:39:33.400707 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:39:33.400975 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:39:33.401114 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:39:33.412706 [info ] [MainThread]: Using profiles dir at /Users/afsaruddinmohammed/.dbt
+[0m11:39:33.412892 [info ] [MainThread]: Using profiles.yml file at /Users/afsaruddinmohammed/.dbt/profiles.yml
+[0m11:39:33.413030 [info ] [MainThread]: Using dbt_project.yml file at /Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/dbt_project.yml
+[0m11:39:33.450964 [info ] [MainThread]: Configuration:
+[0m11:39:33.451236 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m11:39:33.451379 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:39:33.451508 [info ] [MainThread]: Required dependencies:
+[0m11:39:33.451679 [debug] [MainThread]: Executing "git --help"
+[0m11:39:33.468968 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:39:33.470050 [debug] [MainThread]: STDERR: "b''"
+[0m11:39:33.470474 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:39:33.470745 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m11:39:33.470977 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:39:33.471196 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "my_duckdb_project", target "dev" invalid: Runtime Error
+    http connection method requires additional dependencies. 
+    Install the additional required dependencies with `pip install dbt-spark[PyHive]`
+
+
+[0m11:39:33.473954 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.22651854, "process_in_blocks": "0", "process_kernel_time": 0.173888, "process_mem_max_rss": "106151936", "process_out_blocks": "0", "process_user_time": 0.610841}
+[0m11:39:33.474372 [debug] [MainThread]: Command `dbt debug` failed at 11:39:33.474305 after 0.23 seconds
+[0m11:39:33.474733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ef8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ef8c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ce6fd0>]}
+[0m11:39:33.475004 [debug] [MainThread]: Flushing usage events
+[0m11:39:33.704930 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:40:18.251498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107af1950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b4c1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b72b50>]}
+
+
+============================== 11:40:18.254699 | bdeb17aa-81a1-4567-ac01-e4b67efcae6a ==============================
+[0m11:40:18.254699 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:40:18.255024 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/logs', 'profiles_dir': '/Users/afsaruddinmohammed/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:40:18.266526 [info ] [MainThread]: dbt version: 1.9.3
+[0m11:40:18.266827 [info ] [MainThread]: python version: 3.11.4
+[0m11:40:18.267220 [info ] [MainThread]: python path: /Users/afsaruddinmohammed/anaconda3/bin/python
+[0m11:40:18.267874 [info ] [MainThread]: os info: macOS-15.3.1-arm64-arm-64bit
+[0m11:40:18.365207 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:40:18.365478 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:40:18.365627 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:40:18.379004 [info ] [MainThread]: Using profiles dir at /Users/afsaruddinmohammed/.dbt
+[0m11:40:18.379191 [info ] [MainThread]: Using profiles.yml file at /Users/afsaruddinmohammed/.dbt/profiles.yml
+[0m11:40:18.379321 [info ] [MainThread]: Using dbt_project.yml file at /Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/dbt_project.yml
+[0m11:40:18.379440 [info ] [MainThread]: adapter type: spark
+[0m11:40:18.379549 [info ] [MainThread]: adapter version: 1.9.2
+[0m11:40:18.417765 [info ] [MainThread]: Configuration:
+[0m11:40:18.418015 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:40:18.418163 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:40:18.418303 [info ] [MainThread]: Required dependencies:
+[0m11:40:18.418482 [debug] [MainThread]: Executing "git --help"
+[0m11:40:18.433750 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:40:18.434264 [debug] [MainThread]: STDERR: "b''"
+[0m11:40:18.434435 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:40:18.434590 [info ] [MainThread]: Connection:
+[0m11:40:18.434750 [info ] [MainThread]:   host: localhost
+[0m11:40:18.434871 [info ] [MainThread]:   port: 443
+[0m11:40:18.434976 [info ] [MainThread]:   cluster: None
+[0m11:40:18.435083 [info ] [MainThread]:   endpoint: None
+[0m11:40:18.435187 [info ] [MainThread]:   schema: fg
+[0m11:40:18.435292 [info ] [MainThread]:   organization: 0
+[0m11:40:18.435572 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m11:40:18.504390 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m11:40:18.504773 [debug] [MainThread]: Using spark connection "debug"
+[0m11:40:18.504913 [debug] [MainThread]: On debug: select 1 as id
+[0m11:40:18.505033 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:40:18.505177 [debug] [MainThread]: Spark adapter: connection url: https://localhost:443/sql/protocolv1/o/0/None
+[0m11:40:18.533473 [debug] [MainThread]: Spark adapter: Error while running:
+select 1 as id
+[0m11:40:18.533675 [debug] [MainThread]: Spark adapter: Database Error
+  failed to connect
+[0m11:40:18.533858 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m11:40:18.534009 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:40:18.534129 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    failed to connect
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m11:40:18.535730 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.32006413, "process_in_blocks": "0", "process_kernel_time": 0.19373, "process_mem_max_rss": "114589696", "process_out_blocks": "0", "process_user_time": 0.679899}
+[0m11:40:18.536004 [debug] [MainThread]: Command `dbt debug` failed at 11:40:18.535959 after 0.32 seconds
+[0m11:40:18.536162 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:40:18.536312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b4cc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b65510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b9ff90>]}
+[0m11:40:18.536489 [debug] [MainThread]: Flushing usage events
+[0m11:40:18.711724 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:41:26.181957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc82d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bed6d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bc3c10>]}
+
+
+============================== 11:41:26.186268 | cdabea37-85f5-4574-b4ec-fe77c03e9cff ==============================
+[0m11:41:26.186268 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:41:26.186580 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/afsaruddinmohammed/.dbt', 'log_path': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:41:26.197148 [info ] [MainThread]: dbt version: 1.9.3
+[0m11:41:26.197379 [info ] [MainThread]: python version: 3.11.4
+[0m11:41:26.197545 [info ] [MainThread]: python path: /Users/afsaruddinmohammed/anaconda3/bin/python
+[0m11:41:26.197682 [info ] [MainThread]: os info: macOS-15.3.1-arm64-arm-64bit
+[0m11:41:26.301891 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:41:26.302156 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:41:26.302299 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:41:26.313740 [info ] [MainThread]: Using profiles dir at /Users/afsaruddinmohammed/.dbt
+[0m11:41:26.313946 [info ] [MainThread]: Using profiles.yml file at /Users/afsaruddinmohammed/.dbt/profiles.yml
+[0m11:41:26.314081 [info ] [MainThread]: Using dbt_project.yml file at /Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/dbt_project.yml
+[0m11:41:26.349621 [info ] [MainThread]: Configuration:
+[0m11:41:26.349846 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m11:41:26.350012 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:41:26.350237 [info ] [MainThread]: Required dependencies:
+[0m11:41:26.350499 [debug] [MainThread]: Executing "git --help"
+[0m11:41:26.364466 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:41:26.364936 [debug] [MainThread]: STDERR: "b''"
+[0m11:41:26.365092 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:41:26.365247 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m11:41:26.365376 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:41:26.365501 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "my_duckdb_project", target "dev" invalid: Runtime Error
+    session connection method requires additional dependencies. 
+    Install the additional required dependencies with `pip install dbt-spark[session]`
+    
+    ImportError(No module named 'pyspark')
+
+
+[0m11:41:26.367379 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.2218238, "process_in_blocks": "0", "process_kernel_time": 0.161722, "process_mem_max_rss": "109199360", "process_out_blocks": "0", "process_user_time": 0.604699}
+[0m11:41:26.367724 [debug] [MainThread]: Command `dbt debug` failed at 11:41:26.367670 after 0.22 seconds
+[0m11:41:26.368023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100dace90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100dac250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10544de10>]}
+[0m11:41:26.368328 [debug] [MainThread]: Flushing usage events
+[0m11:41:26.637363 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:41:42.820985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f45210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f46ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ee38d0>]}
+
+
+============================== 11:41:42.823770 | 0a572fe0-cde6-4ec9-97a9-13e6adb4d18e ==============================
+[0m11:41:42.823770 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:41:42.824090 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/logs', 'profiles_dir': '/Users/afsaruddinmohammed/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:41:42.832892 [info ] [MainThread]: dbt version: 1.9.3
+[0m11:41:42.833196 [info ] [MainThread]: python version: 3.11.4
+[0m11:41:42.833423 [info ] [MainThread]: python path: /Users/afsaruddinmohammed/anaconda3/bin/python
+[0m11:41:42.833586 [info ] [MainThread]: os info: macOS-15.3.1-arm64-arm-64bit
+[0m11:41:42.891463 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:41:42.891741 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:41:42.891898 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:41:42.904129 [info ] [MainThread]: Using profiles dir at /Users/afsaruddinmohammed/.dbt
+[0m11:41:42.904331 [info ] [MainThread]: Using profiles.yml file at /Users/afsaruddinmohammed/.dbt/profiles.yml
+[0m11:41:42.904483 [info ] [MainThread]: Using dbt_project.yml file at /Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/dbt_project.yml
+[0m11:41:42.944579 [info ] [MainThread]: Configuration:
+[0m11:41:42.944845 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m11:41:42.944997 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:41:42.945127 [info ] [MainThread]: Required dependencies:
+[0m11:41:42.945298 [debug] [MainThread]: Executing "git --help"
+[0m11:41:42.961666 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:41:42.962192 [debug] [MainThread]: STDERR: "b''"
+[0m11:41:42.962388 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:41:42.962554 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m11:41:42.962687 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:41:42.962813 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "my_duckdb_project", target "dev" invalid: Runtime Error
+    session connection method requires additional dependencies. 
+    Install the additional required dependencies with `pip install dbt-spark[session]`
+    
+    ImportError(No module named 'pyspark')
+
+
+[0m11:41:42.964592 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.17646429, "process_in_blocks": "0", "process_kernel_time": 0.1533, "process_mem_max_rss": "108740608", "process_out_blocks": "0", "process_user_time": 0.609169}
+[0m11:41:42.964915 [debug] [MainThread]: Command `dbt debug` failed at 11:41:42.964866 after 0.18 seconds
+[0m11:41:42.965163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f4c590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f46b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100e14110>]}
+[0m11:41:42.965374 [debug] [MainThread]: Flushing usage events
+[0m11:41:43.155797 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:42:53.339396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093e76d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10941dc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109473ad0>]}
+
+
+============================== 11:42:53.342701 | ed23af23-aba3-4a3d-b59f-a6193c770212 ==============================
+[0m11:42:53.342701 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:42:53.343049 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/afsaruddinmohammed/.dbt', 'log_path': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:42:53.352243 [info ] [MainThread]: dbt version: 1.9.3
+[0m11:42:53.352499 [info ] [MainThread]: python version: 3.11.4
+[0m11:42:53.352660 [info ] [MainThread]: python path: /Users/afsaruddinmohammed/anaconda3/bin/python
+[0m11:42:53.352794 [info ] [MainThread]: os info: macOS-15.3.1-arm64-arm-64bit
+[0m11:42:53.457710 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:42:53.457962 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:42:53.458106 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:42:54.257182 [info ] [MainThread]: Using profiles dir at /Users/afsaruddinmohammed/.dbt
+[0m11:42:54.257454 [info ] [MainThread]: Using profiles.yml file at /Users/afsaruddinmohammed/.dbt/profiles.yml
+[0m11:42:54.257639 [info ] [MainThread]: Using dbt_project.yml file at /Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/dbt_project.yml
+[0m11:42:54.257816 [info ] [MainThread]: adapter type: spark
+[0m11:42:54.257945 [info ] [MainThread]: adapter version: 1.9.2
+[0m11:42:54.303891 [info ] [MainThread]: Configuration:
+[0m11:42:54.304297 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:42:54.304467 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:42:54.304600 [info ] [MainThread]: Required dependencies:
+[0m11:42:54.304790 [debug] [MainThread]: Executing "git --help"
+[0m11:42:54.324084 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:42:54.324678 [debug] [MainThread]: STDERR: "b''"
+[0m11:42:54.324870 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:42:54.325038 [info ] [MainThread]: Connection:
+[0m11:42:54.325233 [info ] [MainThread]:   host: localhost
+[0m11:42:54.325374 [info ] [MainThread]:   port: 443
+[0m11:42:54.325496 [info ] [MainThread]:   cluster: None
+[0m11:42:54.325605 [info ] [MainThread]:   endpoint: None
+[0m11:42:54.325710 [info ] [MainThread]:   schema: fg
+[0m11:42:54.325821 [info ] [MainThread]:   organization: 0
+[0m11:42:54.326100 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m11:42:54.377088 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m11:42:54.377503 [debug] [MainThread]: Using spark connection "debug"
+[0m11:42:54.377642 [debug] [MainThread]: On debug: select 1 as id
+[0m11:42:54.377770 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:42:57.129242 [debug] [MainThread]: SQL status: OK in 2.747 seconds
+[0m11:42:57.131415 [debug] [MainThread]: On debug: Close
+[0m11:42:57.131747 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:42:57.132136 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:42:57.134840 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.8350208, "process_in_blocks": "0", "process_kernel_time": 0.687937, "process_mem_max_rss": "124813312", "process_out_blocks": "0", "process_user_time": 1.955013}
+[0m11:42:57.135382 [debug] [MainThread]: Command `dbt debug` succeeded at 11:42:57.135286 after 3.84 seconds
+[0m11:42:57.135678 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:42:57.135952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109493ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bafa5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109447bd0>]}
+[0m11:42:57.136278 [debug] [MainThread]: Flushing usage events
+[0m11:42:57.354753 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:03:03.338507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bdddd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c5c1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c6e390>]}
+
+
+============================== 12:03:03.341409 | 32eeba0e-9d05-423f-869f-686bad33ee13 ==============================
+[0m12:03:03.341409 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:03:03.341798 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'dbt/profiles', 'log_path': 'dbt/project/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --project-dir dbt/project --profiles-dir dbt/profiles', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:03:03.466411 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:03:03.466709 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:03:03.466867 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:03:03.755518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d58350>]}
+[0m12:03:03.784362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104721290>]}
+[0m12:03:03.784732 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m12:03:03.836415 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m12:03:03.836826 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:03:03.836988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074d4090>]}
+[0m12:03:04.440735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b32c50>]}
+[0m12:03:04.475311 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m12:03:04.478705 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m12:03:04.490781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108da4110>]}
+[0m12:03:04.491029 [info ] [MainThread]: Found 2 models, 4 data tests, 473 macros
+[0m12:03:04.491203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d7ba50>]}
+[0m12:03:04.491890 [info ] [MainThread]: 
+[0m12:03:04.492067 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:03:04.492189 [info ] [MainThread]: 
+[0m12:03:04.492420 [debug] [MainThread]: Acquiring new spark connection 'master'
+[0m12:03:04.495173 [debug] [ThreadPool]: Acquiring new spark connection 'list_schemas'
+[0m12:03:04.499320 [debug] [ThreadPool]: Using spark connection "list_schemas"
+[0m12:03:04.499504 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m12:03:04.499659 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:03:08.447795 [debug] [ThreadPool]: SQL status: OK in 3.946 seconds
+[0m12:03:08.540810 [debug] [ThreadPool]: On list_schemas: Close
+[0m12:03:08.543204 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_schemas, now create__fg)
+[0m12:03:08.543885 [debug] [ThreadPool]: Creating schema "schema: "fg"
+"
+[0m12:03:08.548088 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:08.548316 [debug] [ThreadPool]: Using spark connection "create__fg"
+[0m12:03:08.548465 [debug] [ThreadPool]: On create__fg: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "create__fg"} */
+create schema if not exists fg
+  
+[0m12:03:08.548619 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:03:08.928206 [debug] [ThreadPool]: SQL status: OK in 0.379 seconds
+[0m12:03:08.929053 [debug] [ThreadPool]: Spark adapter: NotImplemented: commit
+[0m12:03:08.929284 [debug] [ThreadPool]: On create__fg: ROLLBACK
+[0m12:03:08.929472 [debug] [ThreadPool]: Spark adapter: NotImplemented: rollback
+[0m12:03:08.929616 [debug] [ThreadPool]: On create__fg: Close
+[0m12:03:08.932810 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create__fg, now list_None_fg)
+[0m12:03:08.936722 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:08.936947 [debug] [ThreadPool]: Using spark connection "list_None_fg"
+[0m12:03:08.937092 [debug] [ThreadPool]: On list_None_fg: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_None_fg"} */
+show table extended in fg like '*'
+  
+[0m12:03:08.937237 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:03:08.996098 [debug] [ThreadPool]: SQL status: OK in 0.059 seconds
+[0m12:03:09.008208 [debug] [ThreadPool]: On list_None_fg: ROLLBACK
+[0m12:03:09.008976 [debug] [ThreadPool]: Spark adapter: NotImplemented: rollback
+[0m12:03:09.009202 [debug] [ThreadPool]: On list_None_fg: Close
+[0m12:03:09.010506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10678f110>]}
+[0m12:03:09.011652 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:09.011838 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m12:03:09.027530 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_first_dbt_model
+[0m12:03:09.029648 [info ] [Thread-3 (]: 1 of 2 START sql table model fg.my_first_dbt_model ............................. [RUN]
+[0m12:03:09.030129 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_None_fg, now model.my_duckdb_project.my_first_dbt_model)
+[0m12:03:09.030343 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_first_dbt_model
+[0m12:03:09.037849 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_first_dbt_model"
+[0m12:03:09.038803 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_first_dbt_model
+[0m12:03:09.049102 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m12:03:09.049339 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+drop table if exists fg.my_first_dbt_model
+[0m12:03:09.049506 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m12:03:09.083878 [debug] [Thread-3 (]: SQL status: OK in 0.034 seconds
+[0m12:03:09.102276 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_first_dbt_model"
+[0m12:03:09.103542 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:09.103765 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m12:03:09.103952 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+
+  
+    
+        create table fg.my_first_dbt_model
+      
+      
+      
+      
+      
+      
+      
+      
+
+      as
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  
+[0m12:03:10.399659 [debug] [Thread-3 (]: SQL status: OK in 1.295 seconds
+[0m12:03:10.415822 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: ROLLBACK
+[0m12:03:10.416592 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m12:03:10.416870 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: Close
+[0m12:03:10.418995 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108edf450>]}
+[0m12:03:10.419741 [info ] [Thread-3 (]: 1 of 2 OK created sql table model fg.my_first_dbt_model ........................ [[32mOK[0m in 1.39s]
+[0m12:03:10.420059 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_first_dbt_model
+[0m12:03:10.420897 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_second_dbt_model
+[0m12:03:10.421165 [info ] [Thread-3 (]: 2 of 2 START sql view model fg.my_second_dbt_model ............................. [RUN]
+[0m12:03:10.421365 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.my_duckdb_project.my_first_dbt_model, now model.my_duckdb_project.my_second_dbt_model)
+[0m12:03:10.421523 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_second_dbt_model
+[0m12:03:10.423569 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_second_dbt_model"
+[0m12:03:10.423960 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_second_dbt_model
+[0m12:03:10.430658 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_second_dbt_model"
+[0m12:03:10.431066 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:10.431218 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_second_dbt_model"
+[0m12:03:10.431363 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_second_dbt_model"} */
+create or replace view fg.my_second_dbt_model
+  
+  
+  as
+    -- Use the `ref` function to select from other models
+
+select *
+from fg.my_first_dbt_model
+where id = 1
+
+[0m12:03:10.431508 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m12:03:10.475073 [debug] [Thread-3 (]: SQL status: OK in 0.043 seconds
+[0m12:03:10.476153 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: ROLLBACK
+[0m12:03:10.476360 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m12:03:10.476521 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: Close
+[0m12:03:10.476830 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32eeba0e-9d05-423f-869f-686bad33ee13', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ced590>]}
+[0m12:03:10.477150 [info ] [Thread-3 (]: 2 of 2 OK created sql view model fg.my_second_dbt_model ........................ [[32mOK[0m in 0.06s]
+[0m12:03:10.477389 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_second_dbt_model
+[0m12:03:10.478356 [debug] [MainThread]: On master: ROLLBACK
+[0m12:03:10.478578 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:03:10.478732 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m12:03:10.478857 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m12:03:10.478980 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m12:03:10.479100 [debug] [MainThread]: On master: ROLLBACK
+[0m12:03:10.479215 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m12:03:10.479330 [debug] [MainThread]: On master: Close
+[0m12:03:10.479477 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:03:10.479597 [debug] [MainThread]: Connection 'model.my_duckdb_project.my_second_dbt_model' was properly closed.
+[0m12:03:10.479747 [info ] [MainThread]: 
+[0m12:03:10.479910 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 5.99 seconds (5.99s).
+[0m12:03:10.480270 [debug] [MainThread]: Command end result
+[0m12:03:10.491663 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m12:03:10.493220 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m12:03:10.495858 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt/project/target/run_results.json
+[0m12:03:10.496021 [info ] [MainThread]: 
+[0m12:03:10.496223 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:03:10.496352 [info ] [MainThread]: 
+[0m12:03:10.496506 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:03:10.498644 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.200859, "process_in_blocks": "0", "process_kernel_time": 0.656778, "process_mem_max_rss": "138346496", "process_out_blocks": "0", "process_user_time": 2.576924}
+[0m12:03:10.498993 [debug] [MainThread]: Command `dbt run` succeeded at 12:03:10.498952 after 7.20 seconds
+[0m12:03:10.499237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f3bed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102ea5b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102ea6bd0>]}
+[0m12:03:10.499404 [debug] [MainThread]: Flushing usage events
+[0m12:03:10.731758 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:50:58.002930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ceafd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d7da90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d7e550>]}
+
+
+============================== 16:50:58.008905 | 576172b9-96b6-4fce-af68-5e07f3b6f45e ==============================
+[0m16:50:58.008905 [info ] [MainThread]: Running with dbt=1.9.3
+[0m16:50:58.009254 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'dbt/profiles', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'dbt/project/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --project-dir dbt/project --profiles-dir dbt/profiles', 'send_anonymous_usage_stats': 'True'}
+[0m16:50:58.107451 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:50:58.107749 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:50:58.107912 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:50:58.343559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d7dd50>]}
+[0m16:50:58.372752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111398c50>]}
+[0m16:50:58.373077 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m16:50:58.425613 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m16:50:58.518924 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:50:58.519135 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:50:58.535570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206d5710>]}
+[0m16:50:58.565068 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m16:50:58.568402 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m16:50:58.579711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120803690>]}
+[0m16:50:58.579942 [info ] [MainThread]: Found 2 models, 4 data tests, 473 macros
+[0m16:50:58.580096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1205e3dd0>]}
+[0m16:50:58.580705 [info ] [MainThread]: 
+[0m16:50:58.580867 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:50:58.580984 [info ] [MainThread]: 
+[0m16:50:58.581193 [debug] [MainThread]: Acquiring new spark connection 'master'
+[0m16:50:58.583823 [debug] [ThreadPool]: Acquiring new spark connection 'list_schemas'
+[0m16:50:58.588625 [debug] [ThreadPool]: Using spark connection "list_schemas"
+[0m16:50:58.588792 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m16:50:58.588926 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:51:02.243513 [debug] [ThreadPool]: SQL status: OK in 3.654 seconds
+[0m16:51:02.313718 [debug] [ThreadPool]: On list_schemas: Close
+[0m16:51:02.316866 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_schemas, now list_None_fg)
+[0m16:51:02.321060 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m16:51:02.321273 [debug] [ThreadPool]: Using spark connection "list_None_fg"
+[0m16:51:02.321419 [debug] [ThreadPool]: On list_None_fg: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_None_fg"} */
+show table extended in fg like '*'
+  
+[0m16:51:02.321563 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:51:02.637817 [debug] [ThreadPool]: SQL status: OK in 0.316 seconds
+[0m16:51:02.658666 [debug] [ThreadPool]: On list_None_fg: ROLLBACK
+[0m16:51:02.659022 [debug] [ThreadPool]: Spark adapter: NotImplemented: rollback
+[0m16:51:02.659198 [debug] [ThreadPool]: On list_None_fg: Close
+[0m16:51:02.660494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ed8050>]}
+[0m16:51:02.660897 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m16:51:02.661042 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m16:51:02.663077 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_first_dbt_model
+[0m16:51:02.663418 [info ] [Thread-3 (]: 1 of 2 START sql table model fg.my_first_dbt_model ............................. [RUN]
+[0m16:51:02.663677 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_None_fg, now model.my_duckdb_project.my_first_dbt_model)
+[0m16:51:02.663847 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_first_dbt_model
+[0m16:51:02.667961 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_first_dbt_model"
+[0m16:51:02.669108 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_first_dbt_model
+[0m16:51:02.679427 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m16:51:02.679682 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+drop table if exists fg.my_first_dbt_model
+[0m16:51:02.679848 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:51:02.979307 [debug] [Thread-3 (]: SQL status: OK in 0.299 seconds
+[0m16:51:02.997824 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_first_dbt_model"
+[0m16:51:02.998576 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m16:51:02.998753 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m16:51:02.998913 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+
+  
+    
+        create table fg.my_first_dbt_model
+      
+      
+      
+      
+      
+      
+      
+      
+
+      as
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  
+[0m16:51:04.361099 [debug] [Thread-3 (]: SQL status: OK in 1.356 seconds
+[0m16:51:04.383921 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: ROLLBACK
+[0m16:51:04.384209 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m16:51:04.384365 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: Close
+[0m16:51:04.389490 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1208d3a50>]}
+[0m16:51:04.390318 [info ] [Thread-3 (]: 1 of 2 OK created sql table model fg.my_first_dbt_model ........................ [[32mOK[0m in 1.72s]
+[0m16:51:04.390631 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_first_dbt_model
+[0m16:51:04.391477 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_second_dbt_model
+[0m16:51:04.391766 [info ] [Thread-3 (]: 2 of 2 START sql view model fg.my_second_dbt_model ............................. [RUN]
+[0m16:51:04.391986 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.my_duckdb_project.my_first_dbt_model, now model.my_duckdb_project.my_second_dbt_model)
+[0m16:51:04.392146 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_second_dbt_model
+[0m16:51:04.394032 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_second_dbt_model"
+[0m16:51:04.394456 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_second_dbt_model
+[0m16:51:04.402974 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_second_dbt_model"
+[0m16:51:04.403446 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m16:51:04.403598 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_second_dbt_model"
+[0m16:51:04.403744 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_second_dbt_model"} */
+create or replace view fg.my_second_dbt_model
+  
+  
+  as
+    -- Use the `ref` function to select from other models
+
+select *
+from fg.my_first_dbt_model
+where id = 1
+
+[0m16:51:04.403899 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:51:04.524354 [debug] [Thread-3 (]: SQL status: OK in 0.120 seconds
+[0m16:51:04.525389 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: ROLLBACK
+[0m16:51:04.525573 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m16:51:04.525720 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: Close
+[0m16:51:04.526000 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '576172b9-96b6-4fce-af68-5e07f3b6f45e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x120ad3f90>]}
+[0m16:51:04.526319 [info ] [Thread-3 (]: 2 of 2 OK created sql view model fg.my_second_dbt_model ........................ [[32mOK[0m in 0.13s]
+[0m16:51:04.526549 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_second_dbt_model
+[0m16:51:04.527249 [debug] [MainThread]: On master: ROLLBACK
+[0m16:51:04.527423 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:51:04.527572 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m16:51:04.527702 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m16:51:04.527822 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m16:51:04.527937 [debug] [MainThread]: On master: ROLLBACK
+[0m16:51:04.528051 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m16:51:04.528159 [debug] [MainThread]: On master: Close
+[0m16:51:04.528299 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:51:04.528409 [debug] [MainThread]: Connection 'model.my_duckdb_project.my_second_dbt_model' was properly closed.
+[0m16:51:04.528553 [info ] [MainThread]: 
+[0m16:51:04.528713 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 5.95 seconds (5.95s).
+[0m16:51:04.529039 [debug] [MainThread]: Command end result
+[0m16:51:04.539197 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m16:51:04.540607 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m16:51:04.543401 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt/project/target/run_results.json
+[0m16:51:04.543552 [info ] [MainThread]: 
+[0m16:51:04.543780 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:51:04.543916 [info ] [MainThread]: 
+[0m16:51:04.544080 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:51:04.546093 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.588233, "process_in_blocks": "0", "process_kernel_time": 0.908548, "process_mem_max_rss": "136593408", "process_out_blocks": "0", "process_user_time": 1.809624}
+[0m16:51:04.546421 [debug] [MainThread]: Command `dbt run` succeeded at 16:51:04.546386 after 6.59 seconds
+[0m16:51:04.546646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b288d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103729dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10372ac90>]}
+[0m16:51:04.546799 [debug] [MainThread]: Flushing usage events
+[0m16:51:04.728635 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:08:18.294751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f97450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f955d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fbc1d0>]}
+
+
+============================== 17:08:18.298250 | 08861315-d936-4452-986e-8a858b9455c2 ==============================
+[0m17:08:18.298250 [info ] [MainThread]: Running with dbt=1.9.3
+[0m17:08:18.298669 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'dbt/profiles', 'debug': 'False', 'version_check': 'True', 'log_path': 'dbt/project/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --project-dir dbt/project --profiles-dir dbt/profiles', 'send_anonymous_usage_stats': 'True'}
+[0m17:08:18.406800 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:08:18.407289 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:08:18.407575 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:08:18.728212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10803c610>]}
+[0m17:08:18.758412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063ba4d0>]}
+[0m17:08:18.758849 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m17:08:18.831400 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m17:08:18.954162 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:08:18.954450 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:08:18.977438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056efe90>]}
+[0m17:08:19.019179 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m17:08:19.023479 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m17:08:19.036544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109003a50>]}
+[0m17:08:19.036902 [info ] [MainThread]: Found 2 models, 4 data tests, 473 macros
+[0m17:08:19.037121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089dded0>]}
+[0m17:08:19.037973 [info ] [MainThread]: 
+[0m17:08:19.038189 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:08:19.038358 [info ] [MainThread]: 
+[0m17:08:19.038640 [debug] [MainThread]: Acquiring new spark connection 'master'
+[0m17:08:19.042270 [debug] [ThreadPool]: Acquiring new spark connection 'list_schemas'
+[0m17:08:19.048730 [debug] [ThreadPool]: Using spark connection "list_schemas"
+[0m17:08:19.048969 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m17:08:19.049147 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:08:24.115817 [debug] [ThreadPool]: SQL status: OK in 5.064 seconds
+[0m17:08:24.274509 [debug] [ThreadPool]: On list_schemas: Close
+[0m17:08:24.286334 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_schemas, now list_None_fg)
+[0m17:08:24.300241 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m17:08:24.300879 [debug] [ThreadPool]: Using spark connection "list_None_fg"
+[0m17:08:24.301253 [debug] [ThreadPool]: On list_None_fg: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_None_fg"} */
+show table extended in fg like '*'
+  
+[0m17:08:24.301836 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:08:25.025449 [debug] [ThreadPool]: SQL status: OK in 0.722 seconds
+[0m17:08:25.071830 [debug] [ThreadPool]: On list_None_fg: ROLLBACK
+[0m17:08:25.072259 [debug] [ThreadPool]: Spark adapter: NotImplemented: rollback
+[0m17:08:25.072630 [debug] [ThreadPool]: On list_None_fg: Close
+[0m17:08:25.073825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aeb0d0>]}
+[0m17:08:25.074448 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:08:25.074662 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:08:25.077804 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_first_dbt_model
+[0m17:08:25.078303 [info ] [Thread-3 (]: 1 of 2 START sql table model fg.my_first_dbt_model ............................. [RUN]
+[0m17:08:25.078671 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_None_fg, now model.my_duckdb_project.my_first_dbt_model)
+[0m17:08:25.078929 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_first_dbt_model
+[0m17:08:25.090321 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_first_dbt_model"
+[0m17:08:25.091238 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_first_dbt_model
+[0m17:08:25.106625 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m17:08:25.106956 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+drop table if exists fg.my_first_dbt_model
+[0m17:08:25.107216 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:08:25.463216 [debug] [Thread-3 (]: SQL status: OK in 0.356 seconds
+[0m17:08:25.496090 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_first_dbt_model"
+[0m17:08:25.497779 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m17:08:25.498290 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m17:08:25.498699 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+
+  
+    
+        create table fg.my_first_dbt_model
+      
+      
+      
+      
+      
+      
+      
+      
+
+      as
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  
+[0m17:08:27.852851 [debug] [Thread-3 (]: SQL status: OK in 2.353 seconds
+[0m17:08:27.878346 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: ROLLBACK
+[0m17:08:27.878783 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m17:08:27.879381 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: Close
+[0m17:08:27.882003 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071a06d0>]}
+[0m17:08:27.882827 [info ] [Thread-3 (]: 1 of 2 OK created sql table model fg.my_first_dbt_model ........................ [[32mOK[0m in 2.80s]
+[0m17:08:27.883255 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_first_dbt_model
+[0m17:08:27.884442 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_second_dbt_model
+[0m17:08:27.884805 [info ] [Thread-3 (]: 2 of 2 START sql view model fg.my_second_dbt_model ............................. [RUN]
+[0m17:08:27.885090 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.my_duckdb_project.my_first_dbt_model, now model.my_duckdb_project.my_second_dbt_model)
+[0m17:08:27.885314 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_second_dbt_model
+[0m17:08:27.891611 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_second_dbt_model"
+[0m17:08:27.892373 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_second_dbt_model
+[0m17:08:27.908531 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_second_dbt_model"
+[0m17:08:27.909626 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m17:08:27.910133 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_second_dbt_model"
+[0m17:08:27.910705 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_second_dbt_model"} */
+create or replace view fg.my_second_dbt_model
+  
+  
+  as
+    -- Use the `ref` function to select from other models
+
+select *
+from fg.my_first_dbt_model
+where id = 1
+
+[0m17:08:27.911089 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:08:28.199655 [debug] [Thread-3 (]: SQL status: OK in 0.289 seconds
+[0m17:08:28.201302 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: ROLLBACK
+[0m17:08:28.201574 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m17:08:28.201792 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: Close
+[0m17:08:28.202171 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '08861315-d936-4452-986e-8a858b9455c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091d4090>]}
+[0m17:08:28.202594 [info ] [Thread-3 (]: 2 of 2 OK created sql view model fg.my_second_dbt_model ........................ [[32mOK[0m in 0.32s]
+[0m17:08:28.202925 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_second_dbt_model
+[0m17:08:28.204120 [debug] [MainThread]: On master: ROLLBACK
+[0m17:08:28.204323 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:08:28.204521 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m17:08:28.204698 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:08:28.204864 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:08:28.205030 [debug] [MainThread]: On master: ROLLBACK
+[0m17:08:28.205211 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m17:08:28.205385 [debug] [MainThread]: On master: Close
+[0m17:08:28.205602 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:08:28.205776 [debug] [MainThread]: Connection 'model.my_duckdb_project.my_second_dbt_model' was properly closed.
+[0m17:08:28.206007 [info ] [MainThread]: 
+[0m17:08:28.206236 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.17 seconds (9.17s).
+[0m17:08:28.206827 [debug] [MainThread]: Command end result
+[0m17:08:28.232838 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m17:08:28.235349 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m17:08:28.240134 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt/project/target/run_results.json
+[0m17:08:28.240418 [info ] [MainThread]: 
+[0m17:08:28.240722 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:08:28.240930 [info ] [MainThread]: 
+[0m17:08:28.241187 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:08:28.244094 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.994042, "process_in_blocks": "0", "process_kernel_time": 0.929721, "process_mem_max_rss": "135757824", "process_out_blocks": "0", "process_user_time": 2.275634}
+[0m17:08:28.244675 [debug] [MainThread]: Command `dbt run` succeeded at 17:08:28.244596 after 9.99 seconds
+[0m17:08:28.245030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c84490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063b6f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10317a7d0>]}
+[0m17:08:28.245335 [debug] [MainThread]: Flushing usage events
+[0m17:08:28.468173 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:26:27.817525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a4af10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096497d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a8e4d0>]}
+
+
+============================== 17:26:27.823049 | ccc0ccdd-75ee-4f39-97bd-19424339fd51 ==============================
+[0m17:26:27.823049 [info ] [MainThread]: Running with dbt=1.9.3
+[0m17:26:27.823355 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'dbt/profiles', 'log_path': 'dbt/project/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --project-dir dbt/project --profiles-dir dbt/profiles', 'send_anonymous_usage_stats': 'True'}
+[0m17:26:27.925926 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:26:27.926255 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:26:27.926423 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:26:28.231829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a8e490>]}
+[0m17:26:28.254600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108be6550>]}
+[0m17:26:28.254965 [info ] [MainThread]: Registered adapter: spark=1.9.2
+[0m17:26:28.309015 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m17:26:28.404842 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:26:28.405061 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:26:28.421158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ca68750>]}
+[0m17:26:28.450288 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m17:26:28.453596 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m17:26:28.464827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2dfb90>]}
+[0m17:26:28.465068 [info ] [MainThread]: Found 2 models, 4 data tests, 473 macros
+[0m17:26:28.465222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8ee2d0>]}
+[0m17:26:28.465838 [info ] [MainThread]: 
+[0m17:26:28.466004 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:26:28.466119 [info ] [MainThread]: 
+[0m17:26:28.466318 [debug] [MainThread]: Acquiring new spark connection 'master'
+[0m17:26:28.468859 [debug] [ThreadPool]: Acquiring new spark connection 'list_schemas'
+[0m17:26:28.473341 [debug] [ThreadPool]: Using spark connection "list_schemas"
+[0m17:26:28.473491 [debug] [ThreadPool]: On list_schemas: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_schemas"} */
+
+    show databases
+  
+[0m17:26:28.473616 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:26:32.217104 [debug] [ThreadPool]: SQL status: OK in 3.742 seconds
+[0m17:26:32.480366 [debug] [ThreadPool]: On list_schemas: Close
+[0m17:26:32.486447 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_schemas, now list_None_fg)
+[0m17:26:32.499002 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m17:26:32.499679 [debug] [ThreadPool]: Using spark connection "list_None_fg"
+[0m17:26:32.500127 [debug] [ThreadPool]: On list_None_fg: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "connection_name": "list_None_fg"} */
+show table extended in fg like '*'
+  
+[0m17:26:32.500812 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:26:32.957707 [debug] [ThreadPool]: SQL status: OK in 0.456 seconds
+[0m17:26:33.133360 [debug] [ThreadPool]: On list_None_fg: ROLLBACK
+[0m17:26:33.134963 [debug] [ThreadPool]: Spark adapter: NotImplemented: rollback
+[0m17:26:33.139341 [debug] [ThreadPool]: On list_None_fg: Close
+[0m17:26:33.146831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c891610>]}
+[0m17:26:33.158314 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:26:33.158958 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:26:33.163716 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_first_dbt_model
+[0m17:26:33.165581 [info ] [Thread-3 (]: 1 of 2 START sql table model fg.my_first_dbt_model ............................. [RUN]
+[0m17:26:33.166785 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_None_fg, now model.my_duckdb_project.my_first_dbt_model)
+[0m17:26:33.167034 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_first_dbt_model
+[0m17:26:33.175683 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_first_dbt_model"
+[0m17:26:33.176641 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_first_dbt_model
+[0m17:26:33.195882 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m17:26:33.196357 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+drop table if exists fg.my_first_dbt_model
+[0m17:26:33.196604 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:26:33.592647 [debug] [Thread-3 (]: SQL status: OK in 0.395 seconds
+[0m17:26:33.624005 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_first_dbt_model"
+[0m17:26:33.624941 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m17:26:33.625139 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_first_dbt_model"
+[0m17:26:33.625357 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_first_dbt_model"} */
+
+  
+    
+        create table fg.my_first_dbt_model
+      
+      
+      
+      
+      
+      
+      
+      
+
+      as
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  
+[0m17:26:34.749002 [debug] [Thread-3 (]: SQL status: OK in 1.122 seconds
+[0m17:26:34.763257 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: ROLLBACK
+[0m17:26:34.763922 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m17:26:34.764200 [debug] [Thread-3 (]: On model.my_duckdb_project.my_first_dbt_model: Close
+[0m17:26:34.765991 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109aa2f50>]}
+[0m17:26:34.766605 [info ] [Thread-3 (]: 1 of 2 OK created sql table model fg.my_first_dbt_model ........................ [[32mOK[0m in 1.60s]
+[0m17:26:34.766920 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_first_dbt_model
+[0m17:26:34.767755 [debug] [Thread-3 (]: Began running node model.my_duckdb_project.my_second_dbt_model
+[0m17:26:34.768038 [info ] [Thread-3 (]: 2 of 2 START sql view model fg.my_second_dbt_model ............................. [RUN]
+[0m17:26:34.768266 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.my_duckdb_project.my_first_dbt_model, now model.my_duckdb_project.my_second_dbt_model)
+[0m17:26:34.768437 [debug] [Thread-3 (]: Began compiling node model.my_duckdb_project.my_second_dbt_model
+[0m17:26:34.770419 [debug] [Thread-3 (]: Writing injected SQL for node "model.my_duckdb_project.my_second_dbt_model"
+[0m17:26:34.770880 [debug] [Thread-3 (]: Began executing node model.my_duckdb_project.my_second_dbt_model
+[0m17:26:34.778414 [debug] [Thread-3 (]: Writing runtime sql for node "model.my_duckdb_project.my_second_dbt_model"
+[0m17:26:34.779477 [debug] [Thread-3 (]: Spark adapter: NotImplemented: add_begin_query
+[0m17:26:34.779713 [debug] [Thread-3 (]: Using spark connection "model.my_duckdb_project.my_second_dbt_model"
+[0m17:26:34.779895 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "my_duckdb_project", "target_name": "dev", "node_id": "model.my_duckdb_project.my_second_dbt_model"} */
+create or replace view fg.my_second_dbt_model
+  
+  
+  as
+    -- Use the `ref` function to select from other models
+
+select *
+from fg.my_first_dbt_model
+where id = 1
+
+[0m17:26:34.780074 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:26:34.881928 [debug] [Thread-3 (]: SQL status: OK in 0.102 seconds
+[0m17:26:34.883817 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: ROLLBACK
+[0m17:26:34.884053 [debug] [Thread-3 (]: Spark adapter: NotImplemented: rollback
+[0m17:26:34.884221 [debug] [Thread-3 (]: On model.my_duckdb_project.my_second_dbt_model: Close
+[0m17:26:34.884541 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ccc0ccdd-75ee-4f39-97bd-19424339fd51', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e42fe10>]}
+[0m17:26:34.884902 [info ] [Thread-3 (]: 2 of 2 OK created sql view model fg.my_second_dbt_model ........................ [[32mOK[0m in 0.12s]
+[0m17:26:34.885159 [debug] [Thread-3 (]: Finished running node model.my_duckdb_project.my_second_dbt_model
+[0m17:26:34.885982 [debug] [MainThread]: On master: ROLLBACK
+[0m17:26:34.886166 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:26:34.886321 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m17:26:34.886455 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:26:34.886580 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:26:34.886702 [debug] [MainThread]: On master: ROLLBACK
+[0m17:26:34.886825 [debug] [MainThread]: Spark adapter: NotImplemented: rollback
+[0m17:26:34.886941 [debug] [MainThread]: On master: Close
+[0m17:26:34.887098 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:26:34.887214 [debug] [MainThread]: Connection 'model.my_duckdb_project.my_second_dbt_model' was properly closed.
+[0m17:26:34.887363 [info ] [MainThread]: 
+[0m17:26:34.887522 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 6.42 seconds (6.42s).
+[0m17:26:34.887938 [debug] [MainThread]: Command end result
+[0m17:26:34.902029 [debug] [MainThread]: Wrote artifact WritableManifest to dbt/project/target/manifest.json
+[0m17:26:34.907336 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt/project/target/semantic_manifest.json
+[0m17:26:34.910551 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt/project/target/run_results.json
+[0m17:26:34.910737 [info ] [MainThread]: 
+[0m17:26:34.910952 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:26:34.911089 [info ] [MainThread]: 
+[0m17:26:34.911247 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m17:26:34.913344 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.133699, "process_in_blocks": "0", "process_kernel_time": 0.83298, "process_mem_max_rss": "136708096", "process_out_blocks": "0", "process_user_time": 1.996803}
+[0m17:26:34.913717 [debug] [MainThread]: Command `dbt run` succeeded at 17:26:34.913669 after 7.13 seconds
+[0m17:26:34.913985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a8de90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a6c4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096495d0>]}
+[0m17:26:34.914183 [debug] [MainThread]: Flushing usage events
+[0m17:26:35.164107 [debug] [MainThread]: An error was encountered while trying to flush usage events
+
+
+============================== 2025-03-30 02:59:43.906728 | 49251f5f-9c01-484e-b887-e5946cffac4b ==============================
+[0m02:59:43.906728 [info ] [MainThread]: Running with dbt=1.4.9
+[0m02:59:43.918110 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/ilum_dbt_job/dbt/profiles', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_dir': '/Users/afsaruddinmohammed/Documents/dbt_ilum/my_duckdb_project/my_duckdb_project/ilum_dbt_job/dbt/project', 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m02:59:43.919502 [debug] [MainThread]: Tracking: tracking
+[0m02:59:43.951401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107349b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107313a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10735e4d0>]}
+[0m02:59:43.969168 [debug] [MainThread]: checksum: 07ac7676dbf91b944d5fe41bac352fb2dda62b33015cbd1e52faa2a2c71f6d73, vars: {}, profile: None, target: None, version: 1.4.9
+[0m02:59:43.981355 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m02:59:43.981699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '49251f5f-9c01-484e-b887-e5946cffac4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074774d0>]}
+[0m02:59:44.156038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073f5fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073f74d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074746d0>]}
+[0m02:59:44.156294 [debug] [MainThread]: Flushing usage events
+[0m02:59:44.369068 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two macros named "materialization_table_default" in the project
+  "dbt".
+   To fix this error, rename or remove one of the following macros:
+      - macros/materializations/models/table/table.sql
+      - macros/materializations/models/table.sql

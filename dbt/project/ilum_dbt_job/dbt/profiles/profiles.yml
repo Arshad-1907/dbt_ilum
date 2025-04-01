@@ -1,0 +1,9 @@
+my_duckdb_project:
+  outputs:
+    dev:
+      type: spark
+      method: session
+      schema: fg
+      host: localhost
+      threads: 1
+  target: dev
